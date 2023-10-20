@@ -1,8 +1,7 @@
-# Multi Document Reader and Chatbot using LangChain and OpenAI
+# Multi Docs Reader and Chatbot using LangChain and OpenAI
 
 ## Summary
-Provided here are a few python scripts to help get started with building your own multi document reader and chatbot.
-The scripts increase in complexity and features, as follows:
+This is a model which can handle multiple doccument and the chatbot helps to answer all the relevent questions based on the doccument
 
 `single-doc.py` Can handle interacting with a single pdf. Sends the entire document content to the LLM prompt.
 
@@ -14,9 +13,6 @@ and remembers the chat history and recent conversations.
 It uses embeddings and vector stores to send the relevant information to the LLM prompt. Also provides a chat interface
 via the terminal using stdin and stdout. Press `q` to escape the chat window.
 
-I wrote an article which explores some of the concepts here, as well as walks through building each of the scripts.
-[Can read that here](https://medium.com/@ssmaameri/building-a-multi-document-reader-and-chatbot-with-langchain-and-chatgpt-d1864d47e339)
-
 
 ## Getting started
 
@@ -24,7 +20,7 @@ I wrote an article which explores some of the concepts here, as well as walks th
 Clone the repository, set up the virtual environment, and install the required packages
 
 ```
-git clone git@github.com:smaameri/multi-doc-chatbot.git
+
 cd multi-doc-chatbot
 python3 -m venv .venv
 . .venv/bin/activate
@@ -48,10 +44,3 @@ interact with inside the `/docs` folder. Enter `q` to exit the prompt at any tim
 python3 multi-doc-chatbot.py
 ```
 
-It's not perfect, and it does give strange answers sometimes, but it does get a basic setup running. It does show 
-that getting a basic Q&A chain working is not enough to create a really good chatbot. To get that working, you will
-need to dig deeper and explore the concepts and ideas in more detail. Possibilities could include optimising the prompt
-templates, using different LLMs which can accept more tokens and context lengths, creating an agent to refine the results,
-and whatever else you can think of 🙂
-
-![Screenshot 2023-05-20 at 12.06.43 PM.png](./img/app-screenshot.png)
